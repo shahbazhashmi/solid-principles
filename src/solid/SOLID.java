@@ -6,6 +6,7 @@
 package solid;
 
 import liskovsubsitution.LiskovSubsitution;
+import openclosed.OpenClosed;
 import singleresponsibility.SingleResponsibility;
 
 /**
@@ -19,7 +20,8 @@ public class SOLID {
      */
     public static void main(String[] args) {
         //new LiskovSubsitution();
-        new SingleResponsibility();
+        //new SingleResponsibility();
+        new OpenClosed();
     }
     
 }

@@ -6,12 +6,13 @@
 package singleresponsibility;
 
 import singleresponsibility.correct.BookPrinter;
+import solid.PrincipleContract;
 
 /**
  *
  * @author shahbaz
  */
-public class SingleResponsibility {
+public class SingleResponsibility implements PrincipleContract{
     
     /**
      * As the name suggests, this principle states that each class should have one responsibility, 
@@ -25,7 +26,8 @@ public class SingleResponsibility {
     }
     
     
-    private void doIncorrectImplementation() {
+    @Override
+    public void doIncorrectImplementation() {
         /**
          * Let’s consider a class that contains book information. 
          * The only job of this class should be containing book related data and 
@@ -40,7 +42,8 @@ public class SingleResponsibility {
     }
     
     
-    private void doCorrectImplementation() {
+    @Override
+    public void doCorrectImplementation() {
         singleresponsibility.correct.Book book = new singleresponsibility.correct.Book("God Skills", "Jopen Sep", "Cosmology");
         
         /**

@@ -5,12 +5,14 @@
  */
 package liskovsubsitution;
 
+import solid.PrincipleContract;
+
 
 /**
  *
  * @author shahbaz
  */
-public class LiskovSubsitution {
+public class LiskovSubsitution implements PrincipleContract{
     
     /**
      * Liskov Substitution Principle can be considered to be an extension of the Open / Closed principle 
@@ -26,8 +28,8 @@ public class LiskovSubsitution {
         
     }
     
-    
-    private void doIncorrectImplementation() {
+    @Override
+    public void doIncorrectImplementation() {
         /**
          * Let us assume that we implemented a Rectangle class with height, width properties and getArea method. 
          * Alone it will function perfectly fine.
@@ -85,7 +87,8 @@ public class LiskovSubsitution {
      * We can fix this code by creating a class (Shape) from which both Rectangle and Square inherit from. 
      * So as we could see in the code below, we have created an abstract class shape with an abstract method GetArea.
      */
-    private void doCorrectImplementation() {
+    @Override
+    public void doCorrectImplementation() {
         liskovsubsitution.correct.Shape rectangle = new liskovsubsitution.correct.Rectangle(2, 3);
         
         System.out.println("Rectangle area -> "+rectangle.getArea());
