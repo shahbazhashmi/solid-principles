@@ -6,6 +6,7 @@
 package solid;
 
 import liskovsubsitution.LiskovSubsitution;
+import singleresponsibility.SingleResponsibility;
 
 /**
  *
@@ -17,7 +18,8 @@ public class SOLID {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new LiskovSubsitution();
+        //new LiskovSubsitution();
+        new SingleResponsibility();
     }
     
 }
