@@ -5,8 +5,6 @@
  */
 package liskovsubsitution;
 
-import liskovsubsitution.incorrect.Rectangle;
-import liskovsubsitution.incorrect.Square;
 
 /**
  *
@@ -16,23 +14,38 @@ public class LiskovSubsitution {
 
     public LiskovSubsitution() {
         
-        Rectangle rectangle = new Rectangle();
+        //doIncorrectImplementation();
+        
+        doCorrectImplementation();
+        
+    }
+    
+    
+    private void doIncorrectImplementation() {
+        liskovsubsitution.incorrect.Rectangle rectangle = new liskovsubsitution.incorrect.Rectangle();
         
         rectangle.setHeight(2);
         rectangle.setWidth(3);
         
         System.out.println("Rectangle area -> "+rectangle.getArea());
         
-        Rectangle square = new Square();
+        liskovsubsitution.incorrect.Rectangle square = new liskovsubsitution.incorrect.Square();
         
         square.setHeight(2);
         square.setWidth(3);
         
         System.out.println("Square area -> "+square.getArea());
-        
-        
     }
     
     
+    private void doCorrectImplementation() {
+        liskovsubsitution.correct.AFourSideShape rectangle = new liskovsubsitution.correct.Rectangle(2, 3);
+        
+        System.out.println("Rectangle area -> "+rectangle.getArea());
+        
+        liskovsubsitution.correct.AFourSideShape square = new liskovsubsitution.correct.Square(2);
+        
+        System.out.println("Square area -> "+square.getArea());
+    }
     
 }
