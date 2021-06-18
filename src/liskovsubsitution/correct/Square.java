@@ -9,7 +9,7 @@ package liskovsubsitution.correct;
  *
  * @author shahbaz
  */
-public class Square implements AFourSideShape{
+public class Square extends Shape{
     
     private int side;
 

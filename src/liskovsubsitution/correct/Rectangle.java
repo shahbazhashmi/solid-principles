@@ -9,7 +9,7 @@ package liskovsubsitution.correct;
  *
  * @author shahbaz
  */
-public class Rectangle implements AFourSideShape{
+public class Rectangle extends Shape{
     
     private int width;
     private int height;

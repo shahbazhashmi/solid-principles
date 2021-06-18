@@ -9,6 +9,6 @@ package liskovsubsitution.correct;
  *
  * @author shahbaz
  */
-public interface AFourSideShape {
-    public int getArea();
+public abstract class Shape {
+    public abstract int getArea();
 }
