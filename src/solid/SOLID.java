@@ -5,6 +5,7 @@
  */
 package solid;
 
+import interfacesegregation.InterfaceSegregation;
 import liskovsubsitution.LiskovSubsitution;
 import openclosed.OpenClosed;
 import singleresponsibility.SingleResponsibility;
@@ -21,7 +22,8 @@ public class SOLID {
     public static void main(String[] args) {
         //new LiskovSubsitution();
         //new SingleResponsibility();
-        new OpenClosed();
+        //new OpenClosed();
+        new InterfaceSegregation();
     }
     
 }
