@@ -49,7 +49,7 @@ public class InterfaceSegregation implements PrincipleContract{
         
         pengiun.eat();
         pengiun.sleep();
-        // So the fly() is not available for Pengiun
+        //So the fly() is not available for Pengiun
         //pengiun.fly();
     }
 
@@ -69,7 +69,7 @@ public class InterfaceSegregation implements PrincipleContract{
         crow.fly();
         
          /**
-         * The implemented methods  do not work fine with Pengiun as a pengiun can eat, sleep but cannot fly.
+         * The implemented methods  do not work with Pengiun as a pengiun can eat, sleep but cannot fly.
          * There is no use fly() for the Pengiun, still it is forced to implement the fly()
          */
         pengiun.eat();

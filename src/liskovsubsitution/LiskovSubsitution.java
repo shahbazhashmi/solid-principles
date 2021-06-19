@@ -22,9 +22,9 @@ public class LiskovSubsitution implements PrincipleContract{
 
     public LiskovSubsitution() {
         
-        //doIncorrectImplementation();
+        doIncorrectImplementation();
         
-        doCorrectImplementation();
+        //doCorrectImplementation();
         
     }
     

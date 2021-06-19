@@ -5,6 +5,7 @@
  */
 package solid;
 
+import dependencyinversion.DependencyInversion;
 import interfacesegregation.InterfaceSegregation;
 import liskovsubsitution.LiskovSubsitution;
 import openclosed.OpenClosed;
@@ -23,7 +24,8 @@ public class SOLID {
         //new LiskovSubsitution();
         //new SingleResponsibility();
         //new OpenClosed();
-        new InterfaceSegregation();
+        //new InterfaceSegregation();
+        new DependencyInversion();
     }
     
 }
