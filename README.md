@@ -1,6 +1,6 @@
 # SOLID Principles
 
-The respository demonstrates all SOLID Principles using Java.
+The repository demonstrates all SOLID Principles using Java.
 
 ## Introduction
 **SOLID is an acronym for the first five object-oriented design (OOD) principles by Robert C. Martin (also known as Uncle Bob).**
