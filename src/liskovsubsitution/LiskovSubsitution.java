@@ -43,7 +43,7 @@ public class LiskovSubsitution implements PrincipleContract{
         
         /**
          * Output:
-         * Area of the rectangle = 6 where Height = 2 and Width = 3
+         * Area of the rectangle = 6 where input -> Height = 2 and Width = 3
          */
         
         /**
@@ -52,13 +52,17 @@ public class LiskovSubsitution implements PrincipleContract{
          * and customize the functionality for a square.
          */
         
-        //liskovsubsitution.incorrect.Rectangle square = new liskovsubsitution.incorrect.Rectangle();
         
         /**
          * But now if we replace the reference of the parent class by the child class 
          * then we will not the correct area for the rectangle since we have change the core 
          * functions (setHeight, setWidth) to set the height and width to same value 
          * which is not true in case of rectangle. Hence we have violated the Liskov Substitution principle.
+         */
+        
+        //liskovsubsitution.incorrect.Rectangle square = new liskovsubsitution.incorrect.Rectangle();
+        /**
+         * changing parent's reference (Rectangle) with child's reference (Square).
          */
         liskovsubsitution.incorrect.Rectangle square = new liskovsubsitution.incorrect.Square();
         
@@ -69,7 +73,15 @@ public class LiskovSubsitution implements PrincipleContract{
         
         /**
          * Output:
-         * Area of the square = 9 where Height = 3 and Width = 3
+         * Area of the square = 9 where input -> Height = 2 and Width = 3
+         */
+        
+        /**
+         * We were expecting a Rectangle of sides 2 and 3 to have an area of 6 but 
+         * we got a Square with sides 3 and 3 and area 9.
+
+         * Hence, using Square’s object in place of the Rectangle’s object totally breaks LSP! 
+         * Read the definition of LSP again:
          */
         
         
@@ -89,22 +101,28 @@ public class LiskovSubsitution implements PrincipleContract{
      */
     @Override
     public void doCorrectImplementation() {
+        /**
+         * Here we are using reference of child's class (Rectangle)
+         */
         liskovsubsitution.correct.Shape rectangle = new liskovsubsitution.correct.Rectangle(2, 3);
         
         System.out.println("Rectangle area -> "+rectangle.getArea());
         
         /**
          * Output:
-         * Area of the rectangle = 6 where Height = 2 and Width = 3
+         * Area of the rectangle = 6 where input -> Height = 2 and Width = 3
          */
         
+        /**
+         * Here we are using reference of child's class (Square)
+         */
         liskovsubsitution.correct.Shape square = new liskovsubsitution.correct.Square(2);
         
         System.out.println("Square area -> "+square.getArea());
         
         /**
          * Output:
-         * Area of the square = 4 where Height = 2 and Width = 2
+         * Area of the square = 4 where input -> Height = 2 and Width = 2
          */
         
         

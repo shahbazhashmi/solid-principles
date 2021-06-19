@@ -21,10 +21,10 @@ public class SOLID {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //new LiskovSubsitution();
-        //new SingleResponsibility();
+        new SingleResponsibility();
         //new OpenClosed();
-        new InterfaceSegregation();
+        //new LiskovSubsitution();
+        //new InterfaceSegregation();
         //new DependencyInversion();
     }
     
