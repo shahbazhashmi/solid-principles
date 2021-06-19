@@ -12,16 +12,16 @@ package interfacesegregation.correct;
 public class Crow implements BirdCanFly{
     @Override
     public void eat() {
-        System.out.println("crow is eating");
+        
     }
 
     @Override
     public void sleep() {
-        System.out.println("crow is sleeping");
+        
     }
 
     @Override
     public void fly() {
-        System.out.println("crow is flying");
+        
     }
 }

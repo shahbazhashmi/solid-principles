@@ -9,16 +9,16 @@ package interfacesegregation.incorrect;
  *
  * @author shahbaz
  */
-public class Pengiun implements Bird{
+public class Penguin implements Bird{
 
     @Override
     public void eat() {
-        System.out.println("Pengiun is eating");
+        
     }
 
     @Override
     public void sleep() {
-        System.out.println("Pengiun is sleeping");
+        
     }
 
     @Override

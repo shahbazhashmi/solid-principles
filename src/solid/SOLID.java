@@ -24,8 +24,8 @@ public class SOLID {
         //new LiskovSubsitution();
         //new SingleResponsibility();
         //new OpenClosed();
-        //new InterfaceSegregation();
-        new DependencyInversion();
+        new InterfaceSegregation();
+        //new DependencyInversion();
     }
     
 }

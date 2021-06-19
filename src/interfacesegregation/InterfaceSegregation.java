@@ -34,10 +34,10 @@ public class InterfaceSegregation implements PrincipleContract{
          */
         interfacesegregation.correct.BirdCanFly crow = new interfacesegregation.correct.Crow();
         /**
-         * Here both Pengiun implements BirdCannotFly interface.
-         * No need to implement BirdCanFly interface, as pengiuns cannot fly.
+         * Here both Penguin implements BirdCannotFly interface.
+         * No need to implement BirdCanFly interface, as penguins cannot fly.
          */
-        interfacesegregation.correct.BirdCannotFly pengiun = new interfacesegregation.correct.Pengiun();
+        interfacesegregation.correct.BirdCannotFly penguin = new interfacesegregation.correct.Penguin();
         
         /**
          * But internally both BirdCanFly and BirdCannotFly extends Bird interface
@@ -47,19 +47,19 @@ public class InterfaceSegregation implements PrincipleContract{
         crow.sleep();
         crow.fly();
         
-        pengiun.eat();
-        pengiun.sleep();
-        //So the fly() is not available for Pengiun
-        //pengiun.fly();
+        penguin.eat();
+        penguin.sleep();
+        //So the fly() is not available for Penguin
+        //penguin.fly();
     }
 
     @Override
     public void doIncorrectImplementation() {
         /**
-         * Here both Crow and Pengiun classes implement Bird interface
+         * Here both Crow and Penguin classes implement Bird interface
          */
         interfacesegregation.incorrect.Crow crow = new interfacesegregation.incorrect.Crow();
-        interfacesegregation.incorrect.Pengiun pengiun = new interfacesegregation.incorrect.Pengiun();
+        interfacesegregation.incorrect.Penguin penguin = new interfacesegregation.incorrect.Penguin();
         
         /**
          * The implemented methods work fine with Crow as a crow can eat, sleep and fly
@@ -69,12 +69,12 @@ public class InterfaceSegregation implements PrincipleContract{
         crow.fly();
         
          /**
-         * The implemented methods  do not work with Pengiun as a pengiun can eat, sleep but cannot fly.
-         * There is no use fly() for the Pengiun, still it is forced to implement the fly()
+         * The implemented methods  do not work with Penguin as a penguin can eat, sleep but cannot fly.
+         * There is no use fly() for the Penguin, still it is forced to implement the fly()
          */
-        pengiun.eat();
-        pengiun.sleep();
-        pengiun.fly();
+        penguin.eat();
+        penguin.sleep();
+        penguin.fly();
     }
     
 }
